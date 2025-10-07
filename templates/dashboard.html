@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to Dashboard</h1>
+    <!-- Vulnerability: XSS - username is rendered without escaping -->
+    <div>Welcome back, <span>{{ username | safe }}</span>!</div>
+    
+    <h2>Search Files</h2>
+    <form action="{{ url_for('search') }}" method="GET">
+        <input type="text" name="q" placeholder="Search files...">
+        <button type="submit">Search</button>
+    </form>
+    
+    <a href="{{ url_for('login') }}">Logout</a>
+</body>
+</html>

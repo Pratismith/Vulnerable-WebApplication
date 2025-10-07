@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vulnerable Web App - Home</title>
+</head>
+<body>
+    <h1>Welcome to Vulnerable Web App</h1>
+    <p>This is a deliberately vulnerable web application for learning security testing.</p>
+    <div>
+        <a href="{{ url_for('login') }}">Login</a> |
+        <a href="{{ url_for('register') }}">Register</a>
+    </div>
+</body>
+</html>
